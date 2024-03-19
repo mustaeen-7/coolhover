@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(246, 246, 246);
+  height: 100vh;
+}
+.cards {
+  display: flex;
+  gap: 30px;
+  border-radius: 50%;
+}
+.hover_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 300px;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+}
+
+.card-camping {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  height: 400px;
+  width: 300px;
+  border-radius: 20px;
+  background: white;
+}
+
+.para {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 25px;
+}
+
+.card-camping img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.left {
+  z-index: 0;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 200px;
+  height: 500px;
+  object-fit: contain;
+  transition: 600ms;
+}
+
+.right {
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  width: 200px;
+  height: 500px;
+  object-fit: contain;
+  transition: 600ms;
+}
+
+.left img {
+  mix-blend-mode: multiply;
+}
+
+.hover_area:hover .left {
+  transform: scale(1.2) translateX(-70px) rotate(-20deg);
+}
+.hover_area:hover .right {
+  transform: scale(1.2) translateX(70px) rotate(20deg);
+}
+
+.card-camping:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 200px rgb(29, 187, 66);
+}
